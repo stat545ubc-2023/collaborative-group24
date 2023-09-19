@@ -1,4 +1,9 @@
-This is the first version of the teamwork file.
+---
+title: "TEAMWORK"
+author: "Sebastian Santana Ortiz"
+date: "2023-09-19"
+output: html_document
+---
 
 Division of Labour: Sebastian typed the initial teamwork file. Troubleshooting, README, Submitting Milestone. Chunyu made the GitHub repo. Sebastian will add 2 markdown functionalities, then Chunyu, Alex, and Thomas will add 1 feature each.
 
