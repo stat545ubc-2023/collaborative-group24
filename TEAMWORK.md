@@ -3,6 +3,7 @@
 2. **Chunyu** made the GitHub repo. 
 3. **Sebastian** will add 2 markdown functionalities, then **Chunyu**, **Alex**, and **Thomas** will add 1 feature each. **Sebastian** will review **Thoma**'s work. **Chunyu** will review **Sebastian**'s work. **Alex** will review **Chunyu**'s work. Finally, **Thoma**'s will review **Alex's** work.
 
+
 # Timing: 
 We agreed to submit pull requests three days before the deadline. We will aim to review the pull request at least two days before the deadline. 
 
@@ -16,3 +17,5 @@ Name | GitHub Username
 ------------ | -------------
 [Yubo Wang](https://www.linkedin.com/in/yubo-wang-82499628b/) | 
 [Chunyu Wang](https://www.linkedin.com/in/shycw1/) | 
+[Sebastian Santana Ortiz](https://www.linkedin.com/in/sebastian-santana-ortiz/) | 
+[Thomas Decker](https://www.linkedin.com/in/thomas-deckers/) | 
