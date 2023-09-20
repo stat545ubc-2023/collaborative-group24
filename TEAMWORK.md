@@ -7,7 +7,7 @@
 -   **Thomas** will add the readme file
 -   The detail of the progress and division of labour can be viewed in the [issue](https://github.com/stat545ubc-2023/collaborative-group24/issues/15#issue-1903906386)
 
-#  Review rules
+# Review rules
 -   **Sebastian** will review **Thoma**'s work. **Chunyu** will review **Sebastian**'s work. **Alex** will review **Chunyu**'s work. Finally, **Thoma**'s will review **Alex's** work.
 
 # Timing:
