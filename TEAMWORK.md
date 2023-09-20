@@ -11,8 +11,8 @@ GitHub issues for code reviews and specific debugging. Slack for big-picture and
 
 
 
-
-First Header | Second Header
+# Teammember Profile
+Name | GitHub Username
 ------------ | -------------
-Content cell 1 | Content cell 2
-Content column 1 | Content column 2
+[Yubo Wang](https://www.linkedin.com/in/yubo-wang-82499628b/) | 
+[Chunyu Wang](https://www.linkedin.com/in/shycw1/) | 
