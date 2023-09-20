@@ -1,8 +1,7 @@
 # Division of Labour: 
 
 - **Chunyu** made the GitHub repo. 
-- (*Submitting Milestone*)
-**Sebastian** typed the second version of teamwork file. Troubleshooting, README, Submitting Milestone. 
+- **Sebastian** typed the second version of teamwork file. Troubleshooting, README, Submitting Milestone. 
 - **Sebastian** will add 2 markdown functionalities, then **Chunyu**, **Alex**, and **Thomas** will add 1 feature each. **Sebastian** will review **Thoma**'s work. **Chunyu** will review **Sebastian**'s work. **Alex** will review **Chunyu**'s work. Finally, **Thoma**'s will review **Alex's** work.
 
 
