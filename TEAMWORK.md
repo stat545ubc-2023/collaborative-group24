@@ -8,3 +8,11 @@ We agreed to submit pull requests three days before the deadline. We will aim to
 
 # Communication: 
 GitHub issues for code reviews and specific debugging. Slack for big-picture and fast-paced communications.
+
+
+
+
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
