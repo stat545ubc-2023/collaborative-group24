@@ -15,7 +15,7 @@ GitHub issues for code reviews and specific debugging. Slack for big-picture and
 # Teammember Profile
 Name | GitHub Username
 ------------ | -------------
-[Yubo Wang](https://www.linkedin.com/in/yubo-wang-82499628b/) | 
-[Chunyu Wang](https://www.linkedin.com/in/shycw1/) | 
-[Sebastian Santana Ortiz](https://www.linkedin.com/in/sebastian-santana-ortiz/) | 
-[Thomas Decker](https://www.linkedin.com/in/thomas-deckers/) | 
+[Yubo Wang](https://www.linkedin.com/in/yubo-wang-82499628b/) | SillyPasty
+[Chunyu Wang](https://www.linkedin.com/in/shycw1/) | shycw1
+[Sebastian Santana Ortiz](https://www.linkedin.com/in/sebastian-santana-ortiz/) | Sebastian-Santana-Ort
+[Thomas Decker](https://www.linkedin.com/in/thomas-deckers/) | thomasbd14
