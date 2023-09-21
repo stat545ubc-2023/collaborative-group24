@@ -11,7 +11,7 @@ This project is to fullfill the first milestone of the collaborate project for t
 -   **.gitignore** is used by git to avoid tracking superfluous files.
 
 ## Running the code
--   **troubleshooting-1.rmd** can be run by opening the file in Rstudio, then clicking "knit". This will re-generate **troubleshooting-1.md** as it appears in this directory.
+-   To run **troubleshooting-1.rmd** from Rstudio, if tidyverse is not installed, run `install.packages('tidyverse')`. Then, open the file in Rstudio and click "knit". This will re-generate **troubleshooting-1.md** as it appears in this directory.
 -   The markdown files, **README.md** and **TEAMWORK.md** are best viewed in github, by clicking the relevant file.
 
 ## Authors
