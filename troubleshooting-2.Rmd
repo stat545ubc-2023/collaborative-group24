@@ -17,7 +17,7 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 ```{r}
 ### ERROR HERE ###
-# Changed previous language to "library" so that packages would be read by R
+# Changed previous install.packages to have ""
 install.packages("dslabs")
 install.packages("tidyverse")
 install.packages("stringr")
