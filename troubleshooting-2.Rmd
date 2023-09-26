@@ -111,6 +111,10 @@ As you already know, `mutate()` defines and inserts new variables into a tibble.
 ### ERROR HERE ### 
 # Most likely, the prompt of the question refers to transmute, which "creates a new data frame containing only the specified computations"
 # (see: https://dplyr.tidyverse.org/reference/transmute.html)
+# Changed this
+#mutate(movieLens,
+#       average_rating = mean(rating))
+# To this
 transmute(movieLens,
        average_rating = mean(rating))
 ```
@@ -182,10 +186,11 @@ starWars %>%
 We can find the minimum height and mass within each species, ignoring the missing values: 
 
 ```{r}
-### ERROR HERE ###
+### ERROR HERE (fixed) ###
 starWars %>%
   group_by(species) %>%
-  summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
+  summarise(across(c("height", "mass"), function(x) min(x, na.rm=TRUE)))
+
 ```
 
 Note that here R has taken the convention that the minimum value of a set of `NA`s is `Inf`.
