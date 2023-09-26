@@ -150,10 +150,10 @@ starWars %>%
 We can find the minimum height and mass within each species, ignoring the missing values: 
 
 ```{r}
-### ERROR HERE ###
+### ERROR HERE (fixed) ###
 starWars %>%
   group_by(species) %>%
-  summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
+  summarise(across(c("height", "mass"), function(x) min(x, na.rm=TRUE)))
 ```
 
 Note that here R has taken the convention that the minimum value of a set of `NA`s is `Inf`.
