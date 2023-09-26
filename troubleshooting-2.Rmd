@@ -18,12 +18,12 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 ```{r}
 ### ERROR HERE ###
 # Changed previous language to "library" so that packages would be read by R
-library(dslabs)
-library(tidyverse)
-library(stringr)
-#install.packages("devtools") # Do not run this if you already have this package installed! 
+install.packages("dslabs")
+install.packages("tidyverse")
+install.packages("stringr")
+install.packages("devtools") # Do not run this if you already have this package installed! 
 devtools::install_github("JoeyBernhardt/singer")
-library(gapminder)
+install.packages("gapminder")
 ```
 
 Let's have a look at the dataset! My goal is to:
