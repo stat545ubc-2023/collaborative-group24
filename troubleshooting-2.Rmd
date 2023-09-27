@@ -151,7 +151,7 @@ Both `count()` and `tally()` can be grouped by multiple columns. Below, I want t
 # changed to: 
 movieLens %>%
   count(title, rating, sort = TRUE) # c() function call should not be passed into count()
-
+```
 
 Not only do `count()` and `tally()` quickly allow you to count items within your dataset, `add_tally()` and `add_count()` are handy shortcuts that add an additional columns to your tibble, rather than collapsing each group.
 
@@ -176,6 +176,7 @@ Using `summarize()`, we can find the minimum and the maximum rating by title, st
 movieLens %>%
   group_by(title) %>%
   summarize(min_rating = min(rating, na.rm = TRUE), max_rating = max(rating, na.rm = TRUE)) 
+```
 
 ## Exercise 5: Scoped variants with `across()`
 
