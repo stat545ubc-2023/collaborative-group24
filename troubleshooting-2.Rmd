@@ -17,12 +17,13 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 ```{r}
 ### ERROR HERE ###
-library(dslabs)
-library(tidyverse)
-library(stringr)
-#install.packages("devtools") # Do not run this if you already have this package installed! 
+# Changed previous install.packages to have ""
+install.packages("dslabs")
+install.packages("tidyverse")
+install.packages("stringr")
+install.packages("devtools") # Do not run this if you already have this package installed! 
 devtools::install_github("JoeyBernhardt/singer")
-library(gapminder)
+install.packages("gapminder")
 ```
 
 Let's have a look at the dataset! My goal is to:
@@ -36,6 +37,9 @@ Let's have a look at the dataset! My goal is to:
 class(dslabs::movielens)
 movieLens <- as_tibble(dslabs::movielens)
 dim(movieLens)
+    # In addition to dim() (which is a part of base R), I used the dplyr function glipmse() 
+    # to have a brief description of what the dataset looks like
+glimpse(movieLens)
 ```
 
 Now that we've had a quick look at the dataset, it would be interesting to explore the rows (observations) in some more detail. I'd like to consider the movie entries that...
@@ -49,9 +53,23 @@ Now that we've had a quick look at the dataset, it would be interesting to explo
 ```{r}
 ### ERROR HERE ###
 filter(movieLens, genres == "Drama")
-filter(movieLens, !genres == "Drama")
-filter(movieLens, year >= 2000)
-filter(movieLens, year == 1999 | month == 2000)
+
+# Changed this 
+#filter(movieLens, !genres == "Drama")
+# To this:
+filter(movieLens, genres != "Drama")
+
+# Changed this
+#filter(movieLens, year >= 2000)
+# To this:
+filter(movieLens, year > 2000)
+
+# Changed this
+#filter(movieLens, year == 1999 | month == 2000)
+# To this:
+filter(movieLens, year == 1999 | year == 2000)
+
+
 filter(movieLens, rating > 4.5, year < 1995)
 ```
 
@@ -60,8 +78,14 @@ While filtering for *all movies that do not belong to the genre drama* above, I 
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  filter(!genres == "Drama") %>%
-  select(title, genres, year, rating, timestamp)
+  # Changed this
+  #filter(!genres == "Drama") %>%
+  # To this
+  filter(genres != "Drama") %>%
+  # Changed this
+  #select(title, genres, year, rating, timestamp)
+  # To this
+  select(title, genres, everything())
 ```
 
 ## Exercise 2: Calculating with `mutate()`-like functions
@@ -71,15 +95,27 @@ Some of the variables in the `movieLens` dataset are in *camelCase* (in fact, *m
 ```{r}
 ### ERROR HERE ###
 movieLens <- movieLens %>%
-  rename(user_id == userId,
-         movie_id == movieId)
+  # Changed this
+  #rename(user_id == userId,
+  #       movie_id == movieId)
+  # To this
+  rename(user_id = userId,
+         movie_id = movieId)
+
+head(movielens)
 ```
 
 As you already know, `mutate()` defines and inserts new variables into a tibble. There is *another mystery function similar to `mutate()`* that adds the new variable, but also drops existing ones. I wanted to create an `average_rating` column that takes the `mean(rating)` across all entries, and I only want to see that variable (i.e drop all others!) but I forgot what that mystery function is. Can you remember?
 
 ```{r}
 ### ERROR HERE ### 
-mutate(movieLens,
+# Most likely, the prompt of the question refers to transmute, which "creates a new data frame containing only the specified computations"
+# (see: https://dplyr.tidyverse.org/reference/transmute.html)
+# Changed this
+#mutate(movieLens,
+#       average_rating = mean(rating))
+# To this
+transmute(movieLens,
        average_rating = mean(rating))
 ```
 
@@ -154,6 +190,7 @@ We can find the minimum height and mass within each species, ignoring the missin
 starWars %>%
   group_by(species) %>%
   summarise(across(c("height", "mass"), function(x) min(x, na.rm=TRUE)))
+
 ```
 
 Note that here R has taken the convention that the minimum value of a set of `NA`s is `Inf`.
