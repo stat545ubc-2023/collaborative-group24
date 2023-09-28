@@ -15,7 +15,7 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 [MovieLens](https://dl.acm.org/doi/10.1145/2827872) are a series of datasets widely used in education, that describe movie ratings from the MovieLens [website](https://movielens.org/). There are several MovieLens datasets, collected by the [GroupLens Research Project](https://grouplens.org/datasets/movielens/) at the University of Minnesota. Here, we load the MovieLens 100K dataset from Rafael Irizarry and Amy Gill's R package, [dslabs](https://cran.r-project.org/web/packages/dslabs/dslabs.pdf), which contains datasets useful for data analysis practice, homework, and projects in data science courses and workshops. We'll also load other required packages.
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 # Changed previous install.packages to have ""
 install.packages("dslabs")
 install.packages("tidyverse")
@@ -23,6 +23,12 @@ install.packages("stringr")
 install.packages("devtools") # Do not run this if you already have this package installed! 
 devtools::install_github("JoeyBernhardt/singer")
 install.packages("gapminder")
+```
+```{r message=FALSE, warning=FALSE}
+library("dslabs")
+library("tidyverse")
+library("stringr")
+library("gapminder")
 ```
 
 Let's have a look at the dataset! My goal is to:
@@ -32,7 +38,7 @@ Let's have a look at the dataset! My goal is to:
 -   Have a quick look at the tibble, using a *dplyr function*.
 
 ```{r}
-### ERROR HERE ###
+
 class(dslabs::movielens)
 movieLens <- as_tibble(dslabs::movielens)
 dim(movieLens)
@@ -50,7 +56,7 @@ Now that we've had a quick look at the dataset, it would be interesting to explo
 -   have *more than* 4.5 stars, and were filmed *before* 1995.
 
 ```{r}
-### ERROR HERE ###
+
 filter(movieLens, genres == "Drama")
 # Changed this 
 #filter(movieLens, !genres == "Drama")
@@ -73,7 +79,7 @@ filter(movieLens, rating > 4.5, year < 1995)
 While filtering for *all movies that do not belong to the genre drama* above, I noticed something interesting. I want to filter for the same thing again, this time selecting variables **title and genres first,** and then *everything else*. But I want to do this in a robust way, so that (for example) if I end up changing `movieLens` to contain more or less columns some time in the future, the code will still work. Hint: there is a function to select "everything else"...
 
 ```{r}
-### ERROR HERE ###
+
 movieLens %>%
   # Changed this
   #filter(!genres == "Drama") %>%
@@ -90,7 +96,7 @@ movieLens %>%
 Some of the variables in the `movieLens` dataset are in *camelCase* (in fact, *movieLens* is in camelCase). Let's clean these two variables to use *snake_case* instead, and assign our post-rename object back to "movieLens".
 
 ```{r}
-### ERROR HERE ###
+
 movieLens <- movieLens %>%
   # Changed this
   #rename(user_id == userId,
@@ -106,7 +112,7 @@ head(movielens)
 As you already know, `mutate()` defines and inserts new variables into a tibble. There is *another mystery function similar to `mutate()`* that adds the new variable, but also drops existing ones. I wanted to create an `average_rating` column that takes the `mean(rating)` across all entries, and I only want to see that variable (i.e drop all others!) but I forgot what that mystery function is. Can you remember?
 
 ```{r}
-### ERROR HERE ### 
+ 
 # Most likely, the prompt of the question refers to transmute, which "creates a new data frame containing only the specified computations"
 # (see: https://dplyr.tidyverse.org/reference/transmute.html)
 # Changed this
@@ -132,7 +138,7 @@ movieLens %>%
 Without using `group_by()`, I want to find out how many movie reviews there have been for each year.
 
 ```{r}
-### ERROR HERE ###
+
 #movieLens %>%
 #  tally(year)
 #Changed to 
@@ -143,7 +149,7 @@ movieLens %>%   # Tally is used for grouped data, count is a short-hand for grou
 Both `count()` and `tally()` can be grouped by multiple columns. Below, I want to count the number of movie reviews by title and rating, and sort the results.
 
 ```{r}
-### ERROR HERE ###
+
 #movieLens %>%
 #  count(c(title, rating), sort = TRUE)
 # changed to: 
@@ -166,7 +172,7 @@ movieLens %>%
 Using `summarize()`, we can find the minimum and the maximum rating by title, stored under columns named `min_rating`, and `max_rating`, respectively.
 
 ```{r}
-### ERROR HERE ###
+
 #movieLens %>%
 #  mutate(min_rating = min(rating), 
 #         max_rating = max(rating))
@@ -214,7 +220,7 @@ Manually create a tibble with 4 columns:
 -   Modification: add *,* after `birth_location`, add *""* for birth_location value.
 
 ```{r}
-### ERROR HERE ###
+
 fakeStarWars <- tribble(
   ~name,            ~birth_weight,  ~birth_year, ~birth_location,
   "Luke Skywalker",  1.35      ,   1998        ,  "Liverpool, England",
